@@ -155,7 +155,7 @@ def count_last_n_odds(integers, n):
       :rtype: int
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
 
@@ -236,10 +236,14 @@ def index_of_first_negative(numbers):
       :rtype: int
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
 
+    for k in range(len(numbers)):
+        if numbers[k] < 0:
+            return k
+    return -1
 
 def run_test_contains_an_a():
     """ Tests the   contains_an_a   function. """
