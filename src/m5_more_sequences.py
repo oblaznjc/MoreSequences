@@ -76,7 +76,7 @@ def sum_radii(circles):
       :rtype: int | float
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     #
     # Note: No fair using "slices" on ANY of these problems,
@@ -87,6 +87,10 @@ def sum_radii(circles):
     #
     #       Instead, use explicit loops, as you have for other problems.
     # ------------------------------------------------------------------
+    total = 0
+    for k in range(len(circles)):
+        total = total + circles[k].radius
+    return total
 
 
 # ----------------------------------------------------------------------
@@ -154,6 +158,12 @@ def count_last_n_odds(integers, n):
     # TODO: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # ------------------------------------------------------------------
+
+    count = 0
+    for k in range(len(integers), len(integers) - n, -1):
+        if integers[k - 1] % 2 == 1:
+            count = count + 1
+    return count
 
 
 # ----------------------------------------------------------------------
