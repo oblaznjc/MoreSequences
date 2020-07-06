@@ -510,8 +510,8 @@ def run_test_fancy_polygon():
     window = rg.RoseWindow(480, 350, title)
 
     circle = rg.Circle(rg.Point(240, 165), 150)
-    circle.fill_color = 'black'
-    fancy_polygon(window, circle, 300, 61, 'yellow', 1)
+    circle.fill_color = 'yellow'
+    fancy_polygon(window, circle, 300, 61, 'black', 1)
     window.close_on_mouse_click()
 
 
@@ -573,7 +573,7 @@ def fancy_polygon(window, circle, number_of_lines, hops_to_next_point, color, th
       :type thickness:       int
     """
     # ------------------------------------------------------------------
-    # TODO: 10. Implement and test this function.
+    # DONE: 10. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPLEMENTATION REQUIREMENT:
