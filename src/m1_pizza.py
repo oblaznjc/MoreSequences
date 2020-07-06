@@ -442,6 +442,19 @@ def polygon(window, circle, number_of_segments, color, thickness):
     #    and then draw lines that are based in part on those points.
     # ------------------------------------------------------------------
 
+    circle.attach_to(window)
+    points = generate_points_on_circle(circle, number_of_segments)
+    for k in range(number_of_segments - 1):
+        line = rg.Line(points[k], points[k + 1])
+        line.attach_to(window)
+        line.color = color
+        line.thickness = thickness
+    line = rg.Line(points[0], points[number_of_segments - 1])
+    line.color = color
+    line.thickness = thickness
+    line.attach_to(window)
+    window.render()
+
 
 def run_test_fancy_polygon():
     """ Tests the   fancy_polygon   function. """
