@@ -392,12 +392,12 @@ def run_test_polygon():
     # ------------------------------------------------------------------
 
     # Test 3
-    title = 'POLYGON test 3:  3 segments with thick blue lines'
+    title = 'POLYGON test 3:  4 segments, black lines on lime green circle.'
     window = rg.RoseWindow(400, 400, title)
 
-    circle = rg.Circle(rg.Point(100, 100), 80)
-    circle.outline_thickness = 3
-    polygon(window, circle, 3, 'blue', 10)
+    circle = rg.Circle(rg.Point(200, 200), 150)
+    circle.fill_color = 'lime green'
+    polygon(window, circle, 4, 'black', 5)
 
     window.close_on_mouse_click()
 
